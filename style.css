@@ -19,12 +19,18 @@ grid-template-columns: auto auto;
 }
 
 .mouth{
+    display: grid;
+    align-items: center;
+    justify-items: center;
     width: 50vw;
     height: 50vh;
     background-color: #660099;
 }
 
 .arrow{
+    display: grid;
+    align-items: center;
+    justify-content: center;
     width: 50vw;
     height: 50vh;
     background-color:#ff3333;
@@ -49,6 +55,14 @@ grid-template-columns: auto auto;
           
         }
         
+}
+
+.img-mouth{
+    width: 40%;
+}
+
+.img-arrow{
+    width: 60%;
 }
 
 /* una grid per ognuna delle sezioni
