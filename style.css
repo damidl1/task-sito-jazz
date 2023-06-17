@@ -11,10 +11,19 @@ body {
     width: auto;
     height: auto;
     display: grid;
-    grid-template-columns: 25% 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "logo song-player play-button";
+   
+    
                           
+}
+
+.logo-song{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "logo . play-button"
+                         "song-player . play-button"
+                         "song-artist . play-button"
+                         "song-title . play-button";
 }
 
 .logo {
@@ -24,20 +33,30 @@ body {
 
 .song-player {
 
-    justify-items: bottom;
+    justify-self: left;
+    align-self: flex-end;
     grid-area: song-player;
+    font-size: 15px;
 
 }
 
 .song-artist {
-    font-size: 20px;
+    font-size: 40px;
     grid-area: song-artist;
+    font-weight: bold;
     align-self: end;
+    justify-self: auto;
+}
+
+.song-title{
+    font-size: 30px;
+    grid-area: song-title;
 }
 
 .play-button {
-    
+   justify-self: self-end;
     grid-area: play-button;
+    
     
     
 }
@@ -48,6 +67,17 @@ body {
 
 .third-section {
     background-color: #ffcc00;
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: auto;
+
+}
+
+.title-big{
+    font-weight: bold;
+    margin: 0;
+    font-size: 150px;
 }
 
 .fourth-section {
