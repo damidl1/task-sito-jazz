@@ -1,24 +1,87 @@
-body *{
+body * {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0px;
 }
 
-.first-section{
-background-color: #ffcc00;
-width: 100vw;
-height: 100vh;
+.first-section {
+    background-color: #ffcc00;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo song-player play-button";
+                          
 }
 
-.last-section{
-display: grid;
-grid-template-rows: auto;
-grid-template-columns: auto auto;
+.logo {
+    width: 250px;
+    grid-area: logo;
 }
 
-.mouth{
+.song-player {
+
+    justify-items: bottom;
+    grid-area: song-player;
+
+}
+
+.song-artist {
+    font-size: 20px;
+    grid-area: song-artist;
+    align-self: end;
+}
+
+.play-button {
+    
+    grid-area: play-button;
+    
+    
+}
+
+.second-section {
+    background-color: #660099;
+}
+
+.third-section {
+    background-color: #ffcc00;
+}
+
+.fourth-section {
+    background-color: #660099;
+}
+
+.fifth-section {
+    background-color: white;
+}
+
+.sixth-section {
+    background-color: #ffcc00;
+}
+
+.seventh-section {
+    background-color: #0099ff;
+}
+
+.height-section {
+    background-color: #660099;
+}
+
+.ninth-section {
+    background-color: #ffcc00;
+}
+
+
+.last-section {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+}
+
+.mouth {
     display: grid;
     align-items: center;
     justify-items: center;
@@ -27,46 +90,44 @@ grid-template-columns: auto auto;
     background-color: #660099;
 }
 
-.arrow{
+.arrow {
     display: grid;
     align-items: center;
     justify-content: center;
     width: 50vw;
     height: 50vh;
-    background-color:#ff3333;
+    background-color: #ff3333;
 }
 
 @media (max-width: 768px) {
-    .last-section{
+    .last-section {
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: auto;
-        }
-        
-        .mouth{
-            width: 100vw;
-            height: 100vh;
-           
-        }
-        
-        .arrow{
-            width: 100vw;
-            height: 100vh;
-          
-        }
-        
+    }
+
+    .mouth {
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    .arrow {
+        width: 100vw;
+        height: 100vh;
+
+    }
+
 }
 
-.img-mouth{
+.img-mouth {
     width: 40%;
 }
 
-.img-arrow{
+.img-arrow {
     width: 60%;
 }
 
 /* una grid per ognuna delle sezioni
 
-fare una sezione alla volta 
-
-*/
+fare una sezione alla volta  */
