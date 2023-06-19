@@ -4,61 +4,75 @@ body * {
 
 body {
     margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+/* FIRST SECTION -------------------------------------------- */
 
 .first-section {
     background-color: #ffcc00;
-    width: auto;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     display: grid;
-   
+    grid-template-rows: 280px 1fr 150px;
+    grid-template-columns: 280px 1fr 50%;
+    grid-template-areas: "logo . play" 
+                         ". . play" 
+                         "info . play";
     
                           
 }
 
-.logo-song{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "logo . play-button"
-                         "song-player . play-button"
-                         "song-artist . play-button"
-                         "song-title . play-button";
-}
 
-.logo {
-    width: 250px;
+
+
+   /* in logo img abbiamo messo il padding per centrare l'elemento e width 100% per fare prendere all'img tutto lo spazio disponibile nella sua grid */
+
+.logo-img {
+    padding: 32px;
+    width: 100%; 
     grid-area: logo;
 }
 
-.song-player {
-
-    justify-self: left;
-    align-self: flex-end;
-    grid-area: song-player;
-    font-size: 15px;
-
+.play-btn{
+grid-area: play;
+height: 100%;
+max-width: 100%;
 }
 
-.song-artist {
-    font-size: 40px;
-    grid-area: song-artist;
-    font-weight: bold;
-    align-self: end;
-    justify-self: auto;
+.play-info{
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
 }
 
-.song-title{
-    font-size: 30px;
-    grid-area: song-title;
+.label{
+    text-transform: uppercase;
 }
 
-.play-button {
-   justify-self: self-end;
-    grid-area: play-button;
-    
-    
-    
+.artist{
+   font-weight: bold;
+   font-size: xx-large;
+   margin-top: 8px;
+}
+
+.song{
+   font-size: large;
+}
+
+@media (max-width: 768px) {
+ .first-section{
+    grid-template-columns: 100%;
+    grid-template-rows: 280px 1fr 150px;
+    grid-template-areas: "logo" "play" "info"; 
+ }
+ .play-btn{
+    padding: 32px;
+ }
+ .logo-img{
+    max-width: 280px;
+ }
 }
 
 .second-section {
@@ -67,25 +81,103 @@ body {
 
 .third-section {
     background-color: #ffcc00;
-    display: grid;
-    width: auto;
-    height: auto;
-    grid-template-columns: auto;
+    
 
 }
 
-.title-big{
-    font-weight: bold;
-    margin: 0;
-    font-size: 150px;
-}
+
+
 
 .fourth-section {
     background-color: #660099;
 }
 
+/* fifth section, 3 colonne e 6 righe */
+
 .fifth-section {
     background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "title title circle" 
+                         ". . p1" 
+                         "p2 p3 ." 
+                         ". p4 ." 
+                         ". . p5" 
+                         "p6 p7 .";
+    gap: 32px;
+}
+
+
+
+.day{
+font-size: 100px;
+margin: 0px;
+}
+
+.row{
+    border-bottom: 1px solid grey;
+    padding: 32px;
+}
+
+.p1{
+    grid-area: p1;
+}
+
+.p2{
+    grid-area: p2;
+}
+
+.p3{
+    grid-area: p3;
+}
+
+.p4{
+    grid-area: p4;
+}
+
+.p5{
+    grid-area: p5;
+}
+
+.p6{
+    grid-area: p6;
+}
+
+.p7{
+    grid-area: p7;
+}
+
+
+.title{
+    grid-area: title;
+    font-weight: bold;
+    font-size: 164px;
+    margin: 0px;
+    padding: 32px;
+    
+}
+
+.circle{
+    grid-area: circle;
+    background-color: black;
+    height: 164px;
+    width: 164px;
+    border-radius: 82px;
+    padding: 32px;
+    margin: 32px;
+    justify-self: end;
+}
+@media (max-width: 768px) {
+    .fifth-section {
+        grid-template-rows: repeat(8, auto);
+        grid-template-columns: 100%;
+        grid-template-areas: "title" "p1" "p2" "p3" "p4" "p5" "p6" "p7" "p8";
+        
+    }
+    .title{
+        font-size: 110px;
+    }
 }
 
 .sixth-section {
@@ -104,6 +196,8 @@ body {
     background-color: #ffcc00;
 }
 
+
+/* LAST SECTION -------------------------------------------- */
 
 .last-section {
     display: grid;
